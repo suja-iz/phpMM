@@ -1,3 +1,14 @@
+
+<?php
+$first_name = $_REQUEST['first_name'];
+$last_name = $_REQUEST ['last_name'];
+$email = $_REQUEST['email'];
+$facebook_url = $_REQUEST['facebook_url'];
+$twitter_handle = $_REQUEST['twitter_handle'];
+
+?>
+
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -13,11 +24,11 @@
 	<div id="content">
 		<p>Here's a  record of what information you submitted:</p>
 		<p>
-		Fisrt Name: <?php echo $_REQUEST['first_name']; ?><br>
-		Last Name: <?php  echo $_REQUEST['last_name']; ?><br>
-		E-Mail Address: <?php echo $_REQUEST['email'];  ?><br>
-		Facebook URL:  <<?php echo $_REQUEST ['facebook_url']; ?> <br>
-		Twitter Handle: <?php echo $_REQUEST['twitter_handle']; ?> <br>
+		Fisrt Name: <?php echo $first_name; ?><br>
+		Last Name: <?php  echo $last_name; ?><br>
+		E-Mail Address: <?php echo $email;  ?><br>
+		Facebook URL:  <<?php echo $facebook_url; ?> <br>
+		Twitter Handle: <?php echo $twitter_handle; ?> <br>
 	</p>
 	</div>
 <div id="footer"></div>
