@@ -14,7 +14,7 @@ $twitter_handle = $_REQUEST['twitter_handle'];
 <head>
 	<meta charset="utf-8">
 	<title></title>
-	<link rel="stylesheet" type="text/css" href="../../css/phpMM.css">
+	<link rel="stylesheet" type="text/css" href="phpMM.css">
 
 </head>
 <body>
@@ -24,10 +24,10 @@ $twitter_handle = $_REQUEST['twitter_handle'];
 	<div id="content">
 		<p>Here's a  record of what information you submitted:</p>
 		<p>
-		Fisrt Name: <?php echo $first_name; ?><br>
-		Last Name: <?php  echo $last_name; ?><br>
+		Name: <?php echo $first_name ." ". $last_name; ?><br>
+		
 		E-Mail Address: <?php echo $email;  ?><br>
-		Facebook URL:  <<?php echo $facebook_url; ?> <br>
+		Facebook URL: <a href=" <?php echo $facebook_url; ?> "></a> <br>
 		Twitter Handle: <?php echo $twitter_handle; ?> <br>
 	</p>
 	</div>
