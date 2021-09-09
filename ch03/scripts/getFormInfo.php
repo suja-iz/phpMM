@@ -4,6 +4,10 @@ $first_name = $_REQUEST['first_name'];
 $last_name = $_REQUEST ['last_name'];
 $email = $_REQUEST['email'];
 $facebook_url = $_REQUEST['facebook_url'];
+$position = strpos ($facebook_url,"facebook.com");
+if($position===false){
+	$facebook_url = "https://www.facebook.com/" . $facebook_url;
+}
 $twitter_handle = $_REQUEST['twitter_handle'];
 
 ?>
@@ -14,7 +18,7 @@ $twitter_handle = $_REQUEST['twitter_handle'];
 <head>
 	<meta charset="utf-8">
 	<title></title>
-	<link rel="stylesheet" type="text/css" href="phpMM.css">
+	<link rel="stylesheet" type="text/css" href="../../css/phpMM.css">
 
 </head>
 <body>
@@ -27,7 +31,7 @@ $twitter_handle = $_REQUEST['twitter_handle'];
 		Name: <?php echo $first_name ." ". $last_name; ?><br>
 		
 		E-Mail Address: <?php echo $email;  ?><br>
-		Facebook URL: <a href=" <?php echo $facebook_url; ?> "></a> <br>
+		Facebook URL: <a href="<?php echo $facebook_url; ?>">facebook link</a>  <br>
 		Twitter Handle: <?php echo $twitter_handle; ?> <br>
 	</p>
 	</div>
